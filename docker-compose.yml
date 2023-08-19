@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+    app:
+        container_name: app
+        build:
+            context: .
+            target: runner
+        volumes:
+            - .:/home/nextjs/app:delegated
+            - ./node_modules:/home/nextjs/app/node_modules
+        restart: always
+        entrypoint: yarn dev
+        ports:
+            - 8080:8080
+            - 9229:9229
+        env_file:
+            - .env
