@@ -1,4 +1,4 @@
-# HomePage
+# NextJS ❤️ Docker
 Optimized NextJS app for docker
 
 Only takes 211mb!
